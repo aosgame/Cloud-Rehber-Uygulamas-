@@ -10,18 +10,17 @@ function renderRehber(doc){
     let numara =document.createElement('span');
 
     let sil=document.createElement('div');
-    let guncelle=document.createElement('div');
 
     li.setAttribute('data-id',doc.id);
     isim.textContent=doc.data().ad;
     numara.textContent=doc.data().numara;
     sil.textContent='X';
-    guncelle.textContent='G';
+    
 
     li.appendChild(isim);
     li.appendChild(numara);
     li.appendChild(sil);
-    li.appendChild(guncelle);
+   
 
     rehberList.appendChild(li);
 
