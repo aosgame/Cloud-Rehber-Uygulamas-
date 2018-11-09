@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Rehber Uygulaması</h1>
+    <div class="content">
+        <form id="rehber-form">
+            <input type="text" name="isim" placeholder="İsim Ekle" />
+            <input type="text" name="no" placeholder="Numara Ekle" />
+            <button>Ekle</button>
+        </form>
+
+        <ul id="rehber-list">
+            
+        </ul>
+    </div>
+    
+        
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDkPJQg7H7H5m9aPR_1qJCubFlt0iF8N_k",
+            authDomain: "firestore-web-aos.firebaseapp.com",
+            databaseURL: "https://firestore-web-aos.firebaseio.com",
+            projectId: "firestore-web-aos",
+            storageBucket: "firestore-web-aos.appspot.com",
+            messagingSenderId: "818369663627"
+        };
+        firebase.initializeApp(config);
+        const db=firebase.firestore();
+        db.settings({timestampsInSnapshots:true})
+    </script>
+    <script src="./app.js"></script>
+</body>
+</html>
